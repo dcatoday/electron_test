@@ -1,0 +1,69 @@
+<h2>Step Progress Bar</h2>
+
+<div class="progress-bar">
+  <app-step-progress-bar
+  [steps]="steps"
+  [currentStep]="currentStep"></app-step-progress-bar>
+</div>
+
+
+<button (click)="changeStep()">Change Step</button>
+
+<hr>
+
+<h2>Menu Collapse</h2>
+<p>Collapse browser to 768px to view component</p>
+
+<app-menu-collapse [(isVisible)]="isVisible"
+[hideToggle]="hideToggle"
+>
+  <ul>
+    <li>Hello</li>
+    <li>Click the right shadow to close</li>
+    <li>!!!!!!!!!!!!!!!</li>
+  </ul>
+</app-menu-collapse>
+
+<button (click)="toggleVisible('isVisible')">Toggle Collapse</button>
+
+<p>This menu is always collapsed and comes from the top!</p>
+
+<app-menu-collapse [(isVisible)]="isVisible2"
+[alwaysCollapse]="alwaysCollapse"
+[top]="alwaysCollapse">
+  <ul>
+    <li>Hello</li>
+    <li>Pass the alwaysCollaps boolean to always collapse!</li>
+    <li>!!!!!!!!!!!!!!!</li>
+  </ul>
+</app-menu-collapse>
+
+<button (click)="toggleVisible('isVisible2')">Toggle Collapse</button>  
+
+<p>In from the right!</p>
+
+<app-menu-collapse [(isVisible)]="isVisible3"
+[alwaysCollapse]="alwaysCollapse"
+[right]="alwaysCollapse">
+  <ul>
+    <li>Hello</li>
+    <li>Pass the alwaysCollaps boolean to always collapse!</li>
+    <li>!!!!!!!!!!!!!!!</li>
+  </ul>
+</app-menu-collapse>
+
+<button (click)="toggleVisible('isVisible3')">Toggle Collapse</button> 
+
+<p>I come from the bottom!</p>
+
+<app-menu-collapse [(isVisible)]="isVisible4"
+[alwaysCollapse]="alwaysCollapse"
+[bottom]="alwaysCollapse">
+  <ul>
+    <li>Hello</li>
+    <li>Pass the alwaysCollaps boolean to always collapse!</li>
+    <li>!!!!!!!!!!!!!!!</li>
+  </ul>
+</app-menu-collapse>
+
+<button (click)="toggleVisible('isVisible4')">Toggle Collapse</button> 
